@@ -55,10 +55,10 @@ def log_tx_hash(tx_hash):
             lines = lines[1:]
         with open(log_file_path, "w") as log_file:
             log_file.writelines(lines)
-            log_file.write(f"{time.ctime()} - TX Hash: https://genesis-testnet.iniscan.com/tx/{tx_hash}\n")
+            log_file.write(f"{time.ctime()} - TX Hash: {tx_hash}\n")
     else:
         with open(log_file_path, "w") as log_file:
-            log_file.write(f"{time.ctime()} - TX Hash: https://genesis-testnet.iniscan.com/tx/{tx_hash}\n")
+            log_file.write(f"{time.ctime()} - TX Hash: {tx_hash}\n")
 
 def auto_transaction(interval_minutes=5):
     while True:
